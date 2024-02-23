@@ -85,7 +85,7 @@ button:focus-visible {
 }
 
 .content__details {
-  width: 399px;
+  width: 416px;
 }
 
 .result__video {
@@ -113,12 +113,17 @@ button:focus-visible {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto;
-  gap: 8px;
+  gap: 15px;
   margin-top: 5px;
   font-weight: 400;
 }
 
-.search-form__label:hover {
+.search-form__label:has(.search-form__checkbox) {
+  display: flex;
+  align-items: center;
+}
+
+.search-form__label:hover:has(.search-form__checkbox) {
   text-decoration: underline solid white 0.5px;
   text-underline-offset: 2.5px;
   cursor: pointer;
@@ -258,13 +263,12 @@ button:focus-visible {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 200px;
 }
 
 .content__video-card-description {
   font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
-  max-width: 200px;
+  width: 200px;
 }
 
 .more-button {
